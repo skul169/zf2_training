@@ -34,6 +34,14 @@ class Album implements InputFilterAwareInterface
     }
     
     /**
+     * Get array copy
+     */
+    public function getArrayCopy()
+    {
+        return get_object_vars($this);
+    }
+    
+    /**
      * set Input to filter
      * @see \Zend\InputFilter\InputFilterAwareInterface::setInputFilter()
      * 
