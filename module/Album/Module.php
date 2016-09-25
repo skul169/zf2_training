@@ -9,8 +9,6 @@
 
 namespace Album;
 
-// use Zend\Mvc\ModuleRouteListener;
-// use Zend\Mvc\MvcEvent;
 use Album\Model\Album;
 use Album\Model\AlbumTable;
 use Zend\Db\ResultSet\ResultSet;
@@ -18,12 +16,6 @@ use Zend\Db\TableGateway\TableGateway;
 
 class Module
 {
-    // public function onBootstrap(MvcEvent $e)
-    // {
-    // $eventManager = $e->getApplication()->getEventManager();
-    // $moduleRouteListener = new ModuleRouteListener();
-    // $moduleRouteListener->attach($eventManager);
-    // }
 
     public function getConfig()
     {
