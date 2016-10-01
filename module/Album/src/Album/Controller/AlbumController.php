@@ -13,6 +13,7 @@ use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 use Album\Form\AlbumForm;
 use Album\Model\Album;
+use Album\Service\PostServiceInterface;
 
 /**
  * Album Controller
@@ -21,6 +22,16 @@ use Album\Model\Album;
 class AlbumController extends AbstractActionController
 {
     protected $albumTable;
+    
+    /**
+     * @var \Album\Service\PostServiceInterface
+     */
+    protected $postService;
+    
+    public function __construct(PostServiceInterface $postService)
+    {
+        $this->postService = $postService;
+    }
     
     /**
      * List album action
