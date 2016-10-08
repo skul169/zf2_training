@@ -32,8 +32,11 @@ return array(
         )
     ),
     'service_manager' => array(
-        'invokables' => array(
-            'Album\Service\PostServiceInterface' => 'Album\Service\PostService'
+//         'invokables' => array(
+//             'Album\Service\PostServiceInterface' => 'Album\Service\PostService'
+//         )
+        'factories' => array(
+            'Album\Service\PostServiceInterface' => 'Album\Factory\PostServiceFactory'
         )
     ),
 );
